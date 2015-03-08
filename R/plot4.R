@@ -34,20 +34,20 @@ grp <- as.numeric(as.character(elecon_f$Global_reactive_power))
 
 
 ## Draw 4 plots
-par(mfrow = c(2, 2)) # , mar = c(4, 4, 2, 1) , oma = c(0, 0, 2, 0)
+par(mfrow = c(2, 2), cex=0.7) # , mar = c(4, 4, 2, 1) , oma = c(0, 0, 2, 0)
 
 ## Draw plot 1 (= plot2.R)
-plot(daytime, gap, type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
+plot(daytime, gap, type="l", xlab = "", ylab = "Global Active Power")
 
 ## Draw plot 2, voltage
 plot(daytime, volt, type="l", xlab = "datetime", ylab = "Voltage")
 
 ## Draw plot 3 (= plot3.R)
-plot(daytime, Sub_metering_1, col="black" type="l", xlab = "", ylab = "Energy sub metering")
+plot(daytime, Sub_metering_1, col="black", type="l", xlab = "", ylab = "Energy sub metering")
 #lines(daytime, Sub_metering_1, col="black")
 lines(daytime, Sub_metering_2, col="red")
 lines(daytime, Sub_metering_3, col="blue")
-legend("topright", legend = c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"))
+legend("topright", legend = c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"), bty = "n", cex=0.8)
 
 ## Draw plot 4, Global_reactive_power
 plot(daytime, grp, type="l", xlab = "datetime", ylab = "Global_reactive_power")
