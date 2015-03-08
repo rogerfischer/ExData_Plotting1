@@ -55,5 +55,5 @@ plot(daytime, grp, type="l", xlab = "datetime", ylab = "Global_reactive_power")
 
 ## Copy plot2 to a PNG file
 # Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
-dev.copy(png, file = "../plots/plot3.png", width = 480, height = 480)  
+dev.copy(png, file = "../plots/plot4.png", width = 480, height = 480)  
 dev.off() 
