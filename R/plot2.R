@@ -15,9 +15,6 @@ feb1 = as.Date("01/02/2007", "%d/%m/%Y")
 feb2 = as.Date("02/02/2007", "%d/%m/%Y")
 elecon_f <- subset(elecon, Date >= feb1 & Date <= feb2)
 
-## Plotting plot2.png
-# Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
-# Variable: Global_active_power: household global minute-averaged active power (in kilowatt)
 # Variable Global_active_power needs to be numeric, not a factor
 elecon_f$Global_active_power <- as.numeric(as.character(elecon_f$Global_active_power))
 gap <- elecon_f$Global_active_power
@@ -26,7 +23,6 @@ gap <- elecon_f$Global_active_power
 daytime <- as.POSIXct(paste(elecon_f$Date, elecon_f$Time), format="%Y-%m-%d %H:%M:%S")
 
 ## Draw plot
-# get the range for the x and y axis 
 par(mar = c(5, 5, 4, 2))
 plot(daytime, gap, type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
