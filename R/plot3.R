@@ -29,7 +29,7 @@ plot(daytime, Sub_metering_1, type="n", xlab = "", ylab = "Energy sub metering")
 lines(daytime, Sub_metering_1, col="black")
 lines(daytime, Sub_metering_2, col="red")
 lines(daytime, Sub_metering_3, col="blue")
-legend("topright", legend = c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"))
+legend("topright", cex=0.7, legend = c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"))
 
 ## Copy plot2 to a PNG file
 # Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.

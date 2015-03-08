@@ -43,8 +43,8 @@ plot(daytime, gap, type="l", xlab = "", ylab = "Global Active Power (kilowatts)"
 plot(daytime, volt, type="l", xlab = "datetime", ylab = "Voltage")
 
 ## Draw plot 3 (= plot3.R)
-plot(daytime, Sub_metering_1, type="n", xlab = "", ylab = "Energy sub metering")
-lines(daytime, Sub_metering_1, col="black")
+plot(daytime, Sub_metering_1, col="black" type="l", xlab = "", ylab = "Energy sub metering")
+#lines(daytime, Sub_metering_1, col="black")
 lines(daytime, Sub_metering_2, col="red")
 lines(daytime, Sub_metering_3, col="blue")
 legend("topright", legend = c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"))
